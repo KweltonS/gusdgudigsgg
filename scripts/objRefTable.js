@@ -17,6 +17,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Clipboard.Acts.CopyText,
 		C3.Plugins.Text.Exps.Text,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.LoadState,
 		C3.Behaviors.Pin.Acts.PinByProperties,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerGet,
