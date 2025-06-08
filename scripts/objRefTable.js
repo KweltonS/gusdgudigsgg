@@ -6,12 +6,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.GamePush_Channels,
 		C3.Plugins.Eponesh_GameScore,
 		C3.Plugins.Touch,
+		C3.Behaviors.Pin,
 		C3.Plugins.Clipboard,
 		C3.Plugins.TiledBg,
 		C3.Plugins.Sprite,
 		C3.Behaviors.Tween,
 		C3.Plugins.Button,
-		C3.Behaviors.Pin,
+		C3.Plugins.SVGPicture,
+		C3.Plugins.HTMLElement,
+		C3.Plugins.iframe,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Clipboard.Acts.CopyText,
 		C3.Plugins.Text.Exps.Text,
@@ -20,10 +23,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerGet,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerID,
+		C3.Plugins.Text.Cnds.PickByUID,
 		C3.Plugins.TiledBg.Acts.SetVisible,
+		C3.Plugins.Button.Acts.SetVisible,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
 		C3.Plugins.TiledBg.Cnds.CompareX,
 		C3.Plugins.TiledBg.Cnds.CompareY,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Eponesh_GameScore.Cnds.PlayerCompare,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerSet,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerAdd,
@@ -32,7 +38,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerLogin,
 		C3.Plugins.System.Cnds.IsGroupActive,
-		C3.Plugins.Button.Acts.SetCSSStyle
+		C3.Plugins.Button.Acts.SetCSSStyle,
+		C3.Plugins.SVGPicture.Acts.SetImageByName,
+		C3.Plugins.Eponesh_GameScore.Exps.PlayerAvatar,
+		C3.Plugins.Eponesh_GameScore.Exps.PlayerName,
+		C3.Plugins.Button.Cnds.PickByUID,
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -41,6 +52,7 @@ self.C3_JsPropNameTable = [
 	{GamePushChannels: 0},
 	{GamePush: 0},
 	{Тач: 0},
+	{Прикрепить: 0},
 	{ID_Bank_txt: 0},
 	{БуферОбмена: 0},
 	{Fon_Bar: 0},
@@ -50,8 +62,14 @@ self.C3_JsPropNameTable = [
 	{Fon_BarMenu_Close: 0},
 	{icons8подарок: 0},
 	{TEXT: 0},
-	{Прикрепить: 0},
-	{Вход: 0}
+	{Вход: 0},
+	{Avatar: 0},
+	{PlayerName: 0},
+	{ПополнитьПеревод_button: 0},
+	{HTMLЭлемент: 0},
+	{OOjs_UI_icon_errordestructivesvg: 0},
+	{Okay_button: 0},
+	{Popolnenit: 0}
 ];
 
 self.InstanceType = {
@@ -67,5 +85,12 @@ self.InstanceType = {
 	Fon_BarMenu_Close: class extends self.ITiledBackgroundInstance {},
 	icons8подарок: class extends self.ISpriteInstance {},
 	TEXT: class extends self.ITextInstance {},
-	Вход: class extends self.IButtonInstance {}
+	Вход: class extends self.IButtonInstance {},
+	Avatar: class extends self.ISVGPictureInstance {},
+	PlayerName: class extends self.ITextInstance {},
+	ПополнитьПеревод_button: class extends self.IButtonInstance {},
+	HTMLЭлемент: class extends self.IHTMLElementInstance {},
+	OOjs_UI_icon_errordestructivesvg: class extends self.ISpriteInstance {},
+	Okay_button: class extends self.IButtonInstance {},
+	Popolnenit: class extends self.IIframeInstance {}
 }
