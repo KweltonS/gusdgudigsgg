@@ -3,6 +3,7 @@ self.C3_GetObjectRefTable = function () {
 	return [
 		C3.Plugins.Touch,
 		C3.Plugins.TextBox,
+		C3.Behaviors.Anchor,
 		C3.Plugins.Button,
 		C3.Plugins.Browser,
 		C3.Plugins.Sprite,
@@ -39,6 +40,7 @@ self.C3_GetObjectRefTable = function () {
 };
 self.C3_JsPropNameTable = [
 	{Тач: 0},
+	{Якорь: 0},
 	{NickName: 0},
 	{Create_Pay: 0},
 	{Autorizen: 0},
