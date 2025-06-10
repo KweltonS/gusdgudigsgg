@@ -28,13 +28,21 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerGet,
+		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerID,
+		C3.Plugins.Eponesh_GameScore.Exps.PlayerName,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Clipboard.Acts.CopyText,
 		C3.Plugins.Text.Exps.Text,
 		C3.Plugins.Clipboard.Cnds.OnCopySuccess,
+		C3.Plugins.System.Cnds.LayerVisible,
 		C3.Plugins.Text.Acts.SetFontColor,
 		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.System.Cnds.IsGroupActive,
+		C3.Plugins.Sprite.Acts.SetSize,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
+		C3.Plugins.Touch.Cnds.OnDoubleTapGestureObject,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerAdd
 	];
 };
@@ -49,7 +57,8 @@ self.C3_JsPropNameTable = [
 	{GamePushChannels: 0},
 	{GamePush: 0},
 	{Gift_Objavlen: 0},
-	{Спрайт: 0},
+	{Open: 0},
+	{MiniMenu_1: 0},
 	{Balance_txt: 0},
 	{ТайловыйФон: 0},
 	{loader: 0},
@@ -58,7 +67,13 @@ self.C3_JsPropNameTable = [
 	{processingin: 0},
 	{TEXT: 0},
 	{iframe: 0},
-	{HTMLЭлемент: 0}
+	{HTMLЭлемент: 0},
+	{MiniMenu_2: 0},
+	{MiniMenu_3: 0},
+	{Profile_Open: 0},
+	{Gift_Objavlen2: 0},
+	{Nick: 0},
+	{SecretCodeCopy: 0}
 ];
 
 self.InstanceType = {
@@ -71,7 +86,7 @@ self.InstanceType = {
 	GamePushChannels: class extends self.C3.Plugins.GamePush_Channels.Instance {},
 	GamePush: class extends self.C3.Plugins.Eponesh_GameScore.Instance {},
 	Gift_Objavlen: class extends self.ISpriteInstance {},
-	Спрайт: class extends self.ISpriteInstance {},
+	MiniMenu_1: class extends self.ISpriteInstance {},
 	Balance_txt: class extends self.ITextInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
 	loader: class extends self.ISpriteInstance {},
@@ -80,5 +95,11 @@ self.InstanceType = {
 	processingin: class extends self.ISpriteInstance {},
 	TEXT: class extends self.ITextInstance {},
 	iframe: class extends self.IIframeInstance {},
-	HTMLЭлемент: class extends self.IHTMLElementInstance {}
+	HTMLЭлемент: class extends self.IHTMLElementInstance {},
+	MiniMenu_2: class extends self.ISpriteInstance {},
+	MiniMenu_3: class extends self.ISpriteInstance {},
+	Profile_Open: class extends self.ISpriteInstance {},
+	Gift_Objavlen2: class extends self.ISpriteInstance {},
+	Nick: class extends self.ITextInstance {},
+	SecretCodeCopy: class extends self.ITextInstance {}
 }
